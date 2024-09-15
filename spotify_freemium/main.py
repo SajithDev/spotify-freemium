@@ -15,9 +15,9 @@ def restart_app():
     os.system("taskkill /f /im Spotify.exe") #Force terminates the processes
     os.system("Spotify.exe --minimized") #Opens in minimized so current process is not interrupted (focus unchanged) 
 
-def play_song():
-    keyboard.press(Key.media_play_pause)
-    keyboard.release(Key.media_play_pause)
+def play_next_song():
+    keyboard.press(Key.media_next)
+    keyboard.release(Key.media_next)
     
 
 while(1):
@@ -29,7 +29,7 @@ while(1):
             restart_app()
             time.sleep(1.25) # gives time for app to fully open
 
-            play_song()
+            play_next_song()
 
     except TypeError: # when app is closed
         pass
