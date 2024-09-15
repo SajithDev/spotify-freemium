@@ -13,7 +13,7 @@ keyboard = Controller()
 
 def restart_app():
     os.system("taskkill /f /im Spotify.exe") #Force terminates the processes
-    os.system("Spotify.exe --minimized") #Opens in minimized so current process is not interrupted (focus unchanged)
+    os.system("Spotify.exe --minimized") #Opens in minimized so current process is not interrupted (focus unchanged) 
 
 def play_song():
     keyboard.press(Key.media_play_pause)
