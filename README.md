@@ -1,6 +1,6 @@
 ﻿# spotify-freemium
 
-## Seamless Spotify streaming without Premium :)
+### Seamless Spotify streaming :)
 
 ### Setup
 1) Go to https://developer.spotify.com/dashboard and log in
