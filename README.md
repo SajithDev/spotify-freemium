@@ -1,5 +1,8 @@
 ﻿# spotify-freemium
- 
+
+## Seamless Spotify streaming without Premium :)
+
+### Setup
 1) Go to https://developer.spotify.com/dashboard and log in
 2) Select Create App and fill in some details, make the redirect URL https://www.google.com/ or any other trusted URL that will be used for authentication
 3) Select Web API
