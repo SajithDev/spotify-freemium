@@ -25,7 +25,7 @@ while(1):
     results = sp.current_user_playing_track()
 
     try:
-        if results['currently_playing_type'] == 'track':
+        if results['currently_playing_type'] == 'ad':
             restart_app()
             time.sleep(1.25) # gives time for app to fully open
 
