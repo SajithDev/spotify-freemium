@@ -10,6 +10,7 @@ sp = spotipy.Spotify(auth_manager=SpotifyOAuth(scope=scope)) #auto authenticates
 
 keyboard = Controller()
 
+os.system("Spotify.exe")
 
 def restart_app():
     os.system("taskkill /f /im Spotify.exe") #Force terminates the processes
@@ -33,5 +34,8 @@ while(1):
 
     except TypeError: # when app is closed
         pass
+
+    except Exception as e:
+        print(f'Error: {e}')
 
     time.sleep(1) #checks every second so does not waste CPU resources
