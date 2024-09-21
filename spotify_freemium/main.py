@@ -20,22 +20,26 @@ def play_next_song():
     keyboard.press(Key.media_next)
     keyboard.release(Key.media_next)
     
+def main():
+    while(1):
 
-while(1):
+        results = sp.current_user_playing_track()
 
-    results = sp.current_user_playing_track()
+        try:
+            if results['currently_playing_type'] == 'ad':
+                restart_app()
+                time.sleep(1.25) # gives time for app to fully open
 
+                play_next_song()
+
+        except TypeError: # when app is closed
+            pass
+
+        time.sleep(1) #checks every second so does not waste CPU resources
+    
+if __name__ == "__main__":
     try:
-        if results['currently_playing_type'] == 'ad':
-            restart_app()
-            time.sleep(1.25) # gives time for app to fully open
-
-            play_next_song()
-
-    except TypeError: # when app is closed
-        pass
+        main()
 
     except Exception as e:
         print(f'Error: {e}')
-
-    time.sleep(1) #checks every second so does not waste CPU resources
